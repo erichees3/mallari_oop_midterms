@@ -1,0 +1,105 @@
+/* GLOBAL FONT */
+body {
+    margin: 0;
+    font-family: 'Forum', serif;
+    background: #e6e0f0;
+}
+
+/* TITLES (script style) */
+h2 {
+    font-family: 'Homemade Apple', cursive;
+    font-weight: normal;
+}
+
+/* NAVBAR TEXT */
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Forum', serif;
+    font-weight: bold;
+}
+
+/* OPTIONAL: make titles look closer to Figma */
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #b6a9d6;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* GRID LAYOUT */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* CARDS */
+.card {
+    background: #dcd6ea;
+    border: 2px solid #7d6aa3;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* ABOUT SECTION */
+.about {
+    display: flex;
+    gap: 15px;
+}
+
+.about img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.about-text h2 {
+    margin-top: 0;
+}
+
+/* INTRO */
+.intro {
+    font-size: 14px;
+}
+
+/* COURSE */
+.course {
+    grid-column: 1 / 2;
+}
+
+/* NAVIGATE */
+.navigate select {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+/* IMAGE */
+.image img {
+    width: 100%;
+    border-radius: 10px;
+}
