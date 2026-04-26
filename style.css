@@ -87,6 +87,14 @@ h2 {
     text-decoration: underline;
 }
 
+/* BACK TO HOME */
+.back-home {
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    padding: 0 20px;
+    text-align: left; /* or center if you want */
+}
+
 /*--- HOME ---*/
 
 /* LAYOUT */
@@ -371,6 +379,11 @@ iframe {
 
 .contact-form .btn {
     margin-top: 10px;
+    font-family: 'Forum', serif;
+    cursor: pointer;
+}
+
+button.btn {
     cursor: pointer;
 }
 
