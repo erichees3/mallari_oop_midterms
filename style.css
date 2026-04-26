@@ -205,7 +205,7 @@ h2 {
 /*--- MIDTERM PAGE ---*/
 
 /*--- LAYOUT GRD ---*/
-.midterm {
+.midterm .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -214,6 +214,10 @@ h2 {
         "activity activity"
         "exam exam";
     gap: 15px;
+
+    max-width: 1100px;
+    margin: 0 auto 20px auto;
+    padding: 20px;
 }
 
 .page-title {
