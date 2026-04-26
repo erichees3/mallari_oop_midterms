@@ -318,7 +318,7 @@ iframe {
 /*--- CONTACT PAGE ---*/
 
 /*--- LAYOUT GRID ---*/
-.contact-container {
+.contact .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 15px;
