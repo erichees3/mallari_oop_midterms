@@ -63,22 +63,9 @@ body {
 /* GRID LAYOUT */
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-        "about intro"
-        "course navigate";
+    grid-template-columns: 2fr 1fr; /* right is bigger */
     gap: 15px;
 }
-
-/* assign areas */
-.about { grid-area: about; }
-.intro { grid-area: intro; }
-.course { grid-area: course; }
-.navigate { grid-area: navigate; }
-.about { width: 50%; }
-.intro { width: 30%; }
-.course { width: 30%; }
-.navigate { width: 50%; }
 
 /* CARDS */
 .card {
