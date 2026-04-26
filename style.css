@@ -3,27 +3,28 @@ body {
     margin: 0;
     font-family: 'Forum', serif;
     background: #F2F0F4;
+
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* make everything behave properly */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* TITLES (script style) */
 h2 {
     font-family: 'Homemade Apple', cursive;
     font-weight: normal;
-}
-
-/* BODY TEXT */
-h2 {
     font-size: 22px;
     margin-bottom: 10px;
 }
 
-/* BODY BG */
-body {
-    background-image: url("bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
+/* TOP/BOTTOM BARS */
 .top-bar, .bottom-bar {
     width: 100%;
     height: 40px;
@@ -36,7 +37,9 @@ body {
     padding: 10px;
     border: 2px solid #1C0C38;
     border-radius: 10px;
-    margin: 20px;
+
+    max-width: 1100px;      /* ✅ prevents oversized layout */
+    margin: 20px auto;      /* ✅ centers it */
 }
 
 .navbar ul {
@@ -63,8 +66,12 @@ body {
 /* GRID LAYOUT */
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* right is bigger */
+    grid-template-columns: 1fr 1.3fr; /* ✅ right slightly bigger */
     gap: 15px;
+
+    max-width: 1100px;   /* ✅ fixes zoom issue */
+    margin: 0 auto;      /* ✅ centers layout */
+    padding: 20px;
 }
 
 /* CARDS */
@@ -72,7 +79,7 @@ body {
     background: #EBE4F2;
     border: 2px solid #1C0C38;
     border-radius: 10px;
-    padding: 15px;
+    padding: 20px; /* slightly better spacing */
 }
 
 /* ABOUT SECTION */
@@ -104,11 +111,13 @@ body {
 /* INTRO */
 .intro {
     font-size: 14px;
+    text-align: center;
 }
 
 /* COURSE */
 .course {
     grid-column: 1 / 2;
+    text-align: left; /* ✅ FIX: only this is left-aligned */
 }
 
 .course p::before {
@@ -121,37 +130,30 @@ body {
     margin-right: 8px;
 }
 
-.intro, .course {
-    text-align: center;
-}
-
 /* NAVIGATE */
 .navigate {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px; /* ✅ spacing between buttons & image */
 }
 
 .nav-buttons {
-    width: 60%;
+    flex: 1; /* better than width */
 }
 
+/* FIXED IMAGE SIZE */
 .nav-image {
-    width: 150px;
+    max-width: 160px;   /* ✅ prevents it from being too big */
     border-radius: 10px;
     border: 2px solid #1C0C38;
+    flex-shrink: 0;     /* prevents squishing */
 }
 
-.navigate select {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 5px;
-}
-
+/* BUTTONS */
 .btn {
     display: flex;
-    justify-content: space-between; /* pushes arrow right */
+    justify-content: space-between;
     align-items: center;
 
     background: #CDC2E5;
