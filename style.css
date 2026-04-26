@@ -89,12 +89,12 @@ h2 {
 }
 
 /* ABOUT SECTION */
-.about {
+.about-content {
     display: flex;
     gap: 15px;
 }
 
-.about img {
+.about-content img {
     width: 220px;        /* 👈 bigger */
     height: 220px;       /* makes it symmetrical */
     object-fit: cover;
@@ -108,7 +108,7 @@ h2 {
 }
 
 @media (max-width: 768px) {
-    .about {
+    .about-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -211,7 +211,7 @@ h2 {
         "title title"
         "quiz seatwork"
         "activity activity"
-        "exam exam";
+        "exam reflection";
     gap: 15px;
 
     max-width: 1200px;
