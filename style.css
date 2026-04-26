@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Forum', serif;
-    background: #e6e0f0;
+    background: #F2F0F4;
 }
 
 /* TITLES (script style) */
@@ -27,13 +27,14 @@ body {
 .top-bar, .bottom-bar {
     width: 100%;
     height: 40px;
-    background: #b6a9d6;
+    background: #CDC2E5;
 }
 
 /* NAVBAR */
 .navbar {
-    background: #b6a9d6;
+    background: #CDC2E5;
     padding: 10px;
+    border: 2px solid #1C0C38;
     border-radius: 10px;
     margin: 20px;
 }
@@ -69,8 +70,8 @@ body {
 
 /* CARDS */
 .card {
-    background: #dcd6ea;
-    border: 2px solid #7d6aa3;
+    background: #EBE4F2;
+    border: 2px solid #1C0C38;
     border-radius: 10px;
     padding: 15px;
 }
@@ -124,18 +125,18 @@ body {
 
 .btn {
     display: block;
-    background: #b6a9d6;
+    background: #CDC2E5;
     padding: 10px;
     margin: 10px 0;
     text-align: center;
     border-radius: 8px;
     text-decoration: none;
     color: black;
-    border: 1px solid #7d6aa3;
+    border: 1px solid #1C0C38;
 }
 
 .btn:hover {
-    background: #a393c9;
+    background: #A08AB7;
 }
 
 /* IMAGE */
