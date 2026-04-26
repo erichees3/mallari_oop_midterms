@@ -66,7 +66,7 @@ h2 {
 
 /* GRID LAYOUT */
 .container {
-    display: grid;
+    display: block;
     grid-template-columns: 2fr 1fr;
     gap: 15px;
 
