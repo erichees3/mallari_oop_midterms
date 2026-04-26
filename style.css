@@ -63,27 +63,22 @@ body {
 /* GRID LAYOUT */
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "about intro"
+        "course navigate";
     gap: 15px;
 }
 
-/* ROW 1 */
-.about {
-    grid-column: 1 / 2; /* big left */
-}
-
-.intro {
-    grid-column: 2 / 3; /* small right */
-}
-
-/* ROW 2 */
-.course {
-    grid-column: 1 / 2; /* small left */
-}
-
-.navigate {
-    grid-column: 2 / 3; /* big right */
-}
+/* assign areas */
+.about { grid-area: about; }
+.intro { grid-area: intro; }
+.course { grid-area: course; }
+.navigate { grid-area: navigate; }
+.about { width: 50%; }
+.intro { width: 30%; }
+.course { width: 30%; }
+.navigate { width: 50%; }
 
 /* CARDS */
 .card {
@@ -102,6 +97,7 @@ body {
 .about img {
     width: 150px;
     border-radius: 10px;
+    border: 2px solid #1C0C38;
 }
 
 .about-text h2 {
@@ -156,6 +152,7 @@ body {
 .nav-image {
     width: 150px;
     border-radius: 10px;
+    border: 2px solid #1C0C38;
 }
 
 .navigate select {
