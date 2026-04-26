@@ -241,6 +241,28 @@ h2 {
     text-align: center;
 }
 
+/*--- FINAL PAGE ---*/
+
+/*--- LAYOUT GRID ---*/
+.final .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "title title"
+        "quiz seatwork"
+        "activity activity"
+        "exam reflection";
+    gap: 15px;
+
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
+
+.final .container h2 {
+    text-align: center;
+}
+
 .page-title {
     grid-area: title;
     text-align: center;
