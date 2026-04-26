@@ -92,7 +92,9 @@ h2 {
     max-width: 1200px;
     margin: 0 auto 20px auto;
     padding: 0 20px;
-    text-align: left; /* or center if you want */
+
+    display: flex;
+    justify-content: flex-end; /* or center if you want */
 }
 
 /*--- HOME ---*/
