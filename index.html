@@ -84,23 +84,28 @@
     <script>
     document.addEventListener("DOMContentLoaded", function () {
 
-        const links = document.querySelectorAll("a");
         const page = document.getElementById("page");
+        if (!page) return;
+
+        // FADE IN
+        page.classList.add("loaded");
+
+        // HANDLE LINKS
+        const links = document.querySelectorAll("a");
 
         links.forEach(link => {
-            // only apply to internal links
             if (link.hostname === window.location.hostname) {
                 link.addEventListener("click", function (e) {
-                    e.preventDefault();
 
                     const href = this.getAttribute("href");
 
-                    if (href.startsWith("#")) return;
+                    if (!href || href.startsWith("#")) return;
 
-                        // start fade out
-                    page.classList.add("fade-out");
+                    e.preventDefault();
 
-                    // wait for animation, then go
+                    // FADE OUT
+                    page.classList.remove("loaded");
+
                     setTimeout(() => {
                         window.location.href = href;
                     }, 400);
@@ -108,14 +113,6 @@
             }
         });
 
-    });
-    window.addEventListener("load", () => {
-        const page = document.getElementById("page");
-        page.style.opacity = "0";
-
-        setTimeout(() => {
-        page.style.opacity = "1";
-        }, 50);
     });
     </script>
 
