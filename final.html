@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Forum&family=Homemade+Apple&display=swap" rel="stylesheet">
+    <title>Final Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="final">
+    <div id="page">
+        <div class="top-bar"></div>
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="midterm.html">MIDTERM</a></li>
+                <li><a href="final.html" class="active">FINAL</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!-- MAIN CONTAINER -->
+        <div class="container">
+
+            <h2 class="page-title">Final Outputs</h2>
+
+            <!-- QUIZZES -->
+            <div class="card quiz">
+                <h2>Quizzes</h2>
+
+                <div class="card-content scroll">
+
+                    <div class="doc-item">
+                        <iframe src="BSIT2-1_Mallari_EricaMae_Quiz1.pdf"></iframe>
+
+                        <div class="doc-text">
+                            <h3>Quiz 1</h3>
+                            <p>
+                                This quiz tested our knowledge of Lessons 1-3. I found it easy because the topics were explained properly (history of JAVA, different memory systems, etc) and because I reviewed the material beforehand.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="doc-item">
+                        <iframe src="BSIT2-1_Mallari_EricaMae_Quiz2.pdf"></iframe>
+
+                        <div class="doc-text">
+                            <h3>Quiz 2</h3>
+                            <p>
+                                This quiz tested our knowledge of Lessons 4-6. I had a bit of trouble answering this quiz as I hadn't prepared enough beforehand. I tried opening VS Code in hopes of remembering the lessons through my practice codes and plugging in the given codes, but it didn't help a bit. In the end, I did okay, mediocre. It was to be expected if you answer a quiz unprepared. I will definitely give myself time to review the materials thoroughly in my next exams.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SEATWORK -->
+            <div class="card seatwork">
+                <h2>Seatworks</h2>
+
+                <div class="card-content scroll">
+
+                    <div class="doc-item">
+                        <iframe src="#"></iframe>
+
+                        <div class="doc-text">
+                            <h3>Seatwork 1</h3>
+                            <p>To be filled...</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ACTIVITIES -->
+            <div class="card activity">
+                <h2>Activities</h2>
+
+                <div class="card-content scroll">
+
+                    <div class="doc-item">
+                        <iframe src="#"></iframe>
+
+                        <div class="doc-text">
+                            <h3>Activity 1</h3>
+                            <p>
+                               To be filled...
+                            </p>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+
+            <!-- EXAMS -->
+            <div class="card exam">
+                <h2>Exams</h2>
+
+                <div class="card-content scroll">
+
+                    <div class="doc-item">
+                        <iframe src="#"></iframe>
+
+                        <div class="doc-text">
+                            <h3>Midterm Exam</h3>
+                            <p>
+                                To be filled...
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- REFLECTION -->
+            <div class="card reflection">
+                <h2>Reflection</h2>
+                <p>
+                    To be filled...
+                </p>
+            </div>
+
+        </div>
+        <div class="bottom-bar"></div>
+    </div>
+
+    <!-- JS FOR PAGE LOADING -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+        const page = document.getElementById("page");
+        if (!page) return;
+
+        // FADE IN
+        page.classList.add("loaded");
+
+        // HANDLE LINKS
+        const links = document.querySelectorAll("a");
+
+        links.forEach(link => {
+            if (link.hostname === window.location.hostname) {
+                link.addEventListener("click", function (e) {
+
+                    const href = this.getAttribute("href");
+
+                    if (!href || href.startsWith("#")) return;
+
+                    e.preventDefault();
+
+                    // FADE OUT
+                    page.classList.remove("loaded");
+
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 400);
+                });
+            }
+        });
+
+    });
+    </script>
+
+</body>
+
+</html>
