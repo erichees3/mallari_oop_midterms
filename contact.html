@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Forum&family=Homemade+Apple&display=swap" rel="stylesheet">
+    <title>Mallari OOP Midterms Home Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="contact">
+    <div id="page">
+        <div class="top-bar"></div>
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="midterm.html">MIDTERM</a></li>
+                <li><a href="final.html">FINAL</a></li>
+                <li><a href="contact.html" class="active">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!-- MAIN CONTAINER -->
+        <div class="container">
+            <!-- FORM -->
+            <div class="card contact-form">
+                <h2>Contact Me</h2>
+
+                <form action="mailto:erica.mallari06@gmail.com" method="POST" enctype="text/plain">
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="Your name" required>
+
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Your email" required>
+
+                    <label>Message</label>
+                    <textarea name="message" rows="5" placeholder="Type your message..." required></textarea>
+
+                    <button type="submit" class="btn">
+                        <span>Send Message</span>
+                        <span class="arrow">→</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- SOCIALS -->
+            <div class="card socials">
+                <h2>My Socials</h2>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/erichu.6/" class="social-btn">Facebook</a>
+                    <a href="https://www.linkedin.com/in/erica-mae-mallari" class="social-btn">LinkedIn</a>
+                    <a href="https://www.instagram.com/eri.chees3/" class="social-btn">Instagram</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="bottom-bar"></div>
+    </div>
+
+    <!-- JS FOR PAGE LOADING -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const page = document.getElementById("page");
+        if (!page) return;
+
+        // FADE IN
+        page.classList.add("loaded");
+
+        // HANDLE LINKS
+        const links = document.querySelectorAll("a");
+
+        links.forEach(link => {
+            if (link.hostname === window.location.hostname) {
+                link.addEventListener("click", function (e) {
+
+                    const href = this.getAttribute("href");
+
+                    if (!href || href.startsWith("#")) return;
+
+                    e.preventDefault();
+
+                    // FADE OUT
+                    page.classList.remove("loaded");
+
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 400);
+                });
+            }
+        });
+
+    });
+    </script>
+
+</body>
+
+</html>
