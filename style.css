@@ -59,10 +59,12 @@ h2 {
     text-decoration: underline;
 }
 
-/* GRID LAYOUT */
-.container {
+/*--- HOME ---*/
+
+/* LAYOUT */
+.index .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr, 1fr;
     grid-auto-rows: minmax(150px, auto);
     grid-template-areas:
         "about course"
@@ -150,8 +152,8 @@ h2 {
 
 /* INTRO */
 .intro {
-    font-size: 14px;
-    text-align: center;
+    font-size: 16px;
+    align-items: center;
 }
 
 .intro img {
@@ -182,7 +184,6 @@ h2 {
 }
 
 .btn {
-    width: 100%;
     text-decoration: none;
     color: black;
 
@@ -200,10 +201,9 @@ h2 {
     background: #A08AB7;
 }
 
-/* MIDTERM PAGE */
+/*--- MIDTERM PAGE ---*/
 
 /* QUIZZES */
-
 .file-box {
     border: 2px solid #1C0C38;
     border-radius: 10px;
