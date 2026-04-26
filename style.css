@@ -9,20 +9,13 @@ body {
     background-repeat: repeat;
 }
 
-/* make everything behave properly */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 /* TITLES (script style) */
 h2 {
     font-family: 'Homemade Apple', cursive;
     font-weight: normal;
     font-size: 22px;
     text-align: center;
-    margin-bottom: 10px;
+    margin: 0 0 8px 0;
 }
 
 /* TOP/BOTTOM BARS */
@@ -74,7 +67,7 @@ h2 {
         "about course"
         "intro navigate";
     gap: 15px;
-    
+
     max-width: 1100px;
     margin: 0 auto 20px auto;
     padding: 20px;
@@ -100,10 +93,14 @@ h2 {
 }
 
 .about img {
+    max-width: 150px;
+    height: auto;
     width: 150px;
+    display: block;
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid #1C0C38;
+    
 
     flex-shrink: 0;
     align-self: flex-start; /* 👈 important */
@@ -157,9 +154,11 @@ h2 {
     text-align: center;
 }
 
-/* FIXED IMAGE SIZE */
 .intro img {
-    max-width: 160px;   /* ✅ prevents it from being too big */
+    max-width: 160px; 
+    height: auto;
+    width: 150px;
+    display: block;
     border-radius: 10px;
     border: 2px solid #1C0C38;
     flex-shrink: 0;     /* prevents squishing */
@@ -169,15 +168,17 @@ h2 {
 .navigate {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;  /* 👈 KEY FIX */
+    gap: 10px;
     align-items: center;
-    gap: 15px; /* ✅ spacing between buttons & image */
 }
 
 /* BUTTONS */
-.btn {
+.nav-buttons {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     justify-content: space-between;
-    align-items: center;
 
     background: #CDC2E5;
     padding: 10px 15px;
