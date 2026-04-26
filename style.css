@@ -66,7 +66,7 @@ h2 {
 
 /* GRID LAYOUT */
 .container {
-    display: block;
+    display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 15px;
 
@@ -90,8 +90,11 @@ h2 {
 
 .about img {
     width: 150px;
-    border: 2px solid #1C0C38;
+    height: auto;        /* ✅ keeps natural proportions */
+    object-fit: cover;   /* (optional) keeps it nice if cropped */
     border-radius: 10px;
+    border: 2px solid #1C0C38;
+    flex-shrink: 0;      /* ✅ prevents squishing */
 }
 
 .about-text h2 {
@@ -111,8 +114,8 @@ h2 {
 
 /* COURSE */
 .course {
-    grid-column: 1 / 2;
-    text-align: left; /* ✅ FIX: only this is left-aligned */
+    grid-column: 2 / 1;
+    text-align: center;
 }
 
 .course p::before {
