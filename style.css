@@ -63,10 +63,22 @@ body {
 /* GRID LAYOUT */
 .container {
     display: grid;
-    grid-template-columns: 3fr 1fr; /* left bigger */
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "about intro"
+        "course navigate";
     gap: 15px;
-    padding: 20px;
 }
+
+/* assign areas */
+.about { grid-area: about; }
+.intro { grid-area: intro; }
+.course { grid-area: course; }
+.navigate { grid-area: navigate; }
+.about { width: 100%; }
+.intro { width: 90%; }
+.course { width: 80%; }
+.navigate { width: 100%; }
 
 /* CARDS */
 .card {
@@ -111,11 +123,36 @@ body {
     grid-column: 1 / 2;
 }
 
+.course p::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("butterfly_icon.png") no-repeat center;
+    background-size: contain;
+    margin-right: 8px;
+}
+
 .intro, .course {
     text-align: center;
 }
 
 /* NAVIGATE */
+.navigate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-buttons {
+    width: 60%;
+}
+
+.nav-image {
+    width: 150px;
+    border-radius: 10px;
+}
+
 .navigate select {
     display: block;
     width: 100%;
@@ -124,23 +161,23 @@ body {
 }
 
 .btn {
-    display: block;
+    display: flex;
+    justify-content: space-between; /* pushes arrow right */
+    align-items: center;
+
     background: #CDC2E5;
-    padding: 10px;
+    padding: 10px 15px;
     margin: 10px 0;
-    text-align: center;
     border-radius: 8px;
     text-decoration: none;
     color: black;
     border: 1px solid #1C0C38;
 }
 
-.btn:hover {
-    background: #A08AB7;
+.arrow {
+    font-weight: bold;
 }
 
-/* IMAGE */
-.image img {
-    width: 100%;
-    border-radius: 10px;
+.btn:hover {
+    background: #A08AB7;
 }
