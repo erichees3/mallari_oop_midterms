@@ -183,15 +183,8 @@ h2 {
     align-items: center;
 }
 
-.intro img {
-    max-width: 160px; 
-    height: auto;
-    width: 150px;
-    display: inline flow-root;
-    border-radius: 10px;
-    border: 2px solid #1C0C38;
-
-    flex-shrink: 0;     /* prevents squishing */
+.intro p {
+    text-align: center;
 }
 
 /* NAVIGATE SECTION */
