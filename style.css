@@ -21,6 +21,7 @@ body {
     background-image: url("bg.jpg");
     background-size: cover;
     background-repeat: repeat;
+    transform: rotate(45deg);
 }
 
 /* TITLES (script style) */
