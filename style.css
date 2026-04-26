@@ -33,7 +33,7 @@ h2 {
     border-radius: 10px;
 
     width: 100%;      /* fill wrapper */
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 20px auto;
     padding: 10px 20px;
 }
@@ -70,9 +70,9 @@ h2 {
         "intro navigate";
     gap: 15px;
 
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto 20px auto;
-    padding: 10px, 20px;
+    padding: 10px 20px;
 }
 
 .about { grid-area: about; }
@@ -214,9 +214,9 @@ h2 {
         "exam exam";
     gap: 15px;
 
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto 20px auto;
-    padding: 10px, 20px;
+    padding: 10px 20px;
 }
 
 .midterm .container h2 {
