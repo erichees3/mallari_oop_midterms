@@ -38,6 +38,11 @@ h2 {
     padding: 20px;
     border: 2px solid #1C0C38;
     border-radius: 10px;
+
+    width: 100%;      /* fill wrapper */
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 10px 20px;
 }
 
 .navbar ul {
@@ -61,21 +66,18 @@ h2 {
     text-decoration: underline;
 }
 
-.navbar,
-.container {
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
 /* GRID LAYOUT */
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
     grid-template-areas:
         "about course"
         "intro navigate";
     gap: 15px;
+    
+    max-width: 1100px;
+    margin: 0 auto 20px auto;
+    padding: 20px;
 }
 
 .about { grid-area: about; }
@@ -98,10 +100,25 @@ h2 {
 }
 
 .about img {
-    max-width: 160px;   /* ✅ prevents it from being too big */
+    width: 150px;
+    object-fit: cover;
     border-radius: 10px;
     border: 2px solid #1C0C38;
-    flex-shrink: 0;     /* prevents squishing */
+
+    flex-shrink: 0;
+    align-self: flex-start; /* 👈 important */
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        text-align: center;
+    }
 }
 
 .about-text h2 {
