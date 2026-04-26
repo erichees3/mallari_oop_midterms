@@ -71,7 +71,7 @@ h2 {
     gap: 15px;
 
     max-width: 1200px;
-    margin: 0 auto 10px auto;
+    margin: 20px auto;
     padding: 10px 20px;
 }
 
@@ -95,8 +95,8 @@ h2 {
 }
 
 .about-content img {
-    width: 150px;
-    height: 150px;
+    width: 220px;
+    height: 200px;
     object-fit: cover;
     display: block;
     border-radius: 10px;
@@ -215,7 +215,7 @@ h2 {
     gap: 15px;
 
     max-width: 1200px;
-    margin: 0 auto 10px auto;
+    margin: 20px auto;
     padding: 10px 20px;
 }
 
