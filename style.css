@@ -62,7 +62,8 @@ h2 {
 /* GRID LAYOUT */
 .container {
     display: grid;
-    grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(150px, auto);
     grid-template-areas:
         "about course"
         "intro navigate";
@@ -177,22 +178,22 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 }
 
 .btn {
-    justify-content: space-between;
-
-    background: #CDC2E5;
-    padding: 10px 15px;
-    margin: 10px 0;
-    border-radius: 8px;
+    width: 100%;
     text-decoration: none;
     color: black;
-    border: 2px solid #1C0C38;
-}
 
-.arrow {
-    font-weight: bold;
+    padding: 12px 15px;
+    border-radius: 8px;
+    background: #CDC2E5;
+    border: 2px solid #1C0C38;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .btn:hover {
